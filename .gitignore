@@ -9,7 +9,7 @@ __pycache__/
 .env
 
 # Local database or cache files
-*.db
+qg.db
 
 # Vector index files
 faiss.index
