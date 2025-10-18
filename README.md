@@ -34,3 +34,45 @@ Python 3.10+
 SQLite (comes with Python, so no extra install usually)
 
 Git (for cloning / version control)
+
+.env file : 
+OPENROUTER_API_KEY=your_api_key_here
+
+
+HOW TO RUN AFTER YOU CLONE THIS REPO:
+
+git clone https://github.com/samarthkose/ai-study-qg.git
+cd ai-study-qg
+
+1. Create and activate a virtual environment:
+in ai-study-qg path
+
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+
+2. Install dependencies:
+   
+   pip install -r requirements.txt
+
+3. Add your own .env file with your OPENROUTER_API_KEY:
+
+   OPENROUTER_API_KEY=your_api_key_here
+
+4. Initialize the database:
+
+   python -c "from backend.app.db import init_db; init_db()"
+
+5. Run Alembic migrations (to ensure schema matches your current models):
+
+   alembic upgrade head
+
+6. Run the backend:
+
+   uvicorn backend.app.main:app --reload
+
+7. Run the frontend (Streamlit app):
+
+   streamlit run frontend/app.py
