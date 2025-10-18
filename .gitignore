@@ -1,0 +1,19 @@
+# Python virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Local database or cache files
+*.db
+
+# Vector index files
+faiss.index
+
+# OS files
+.DS_Store
+Thumbs.db
