@@ -48,9 +48,9 @@ cd ai-study-qg
 in ai-study-qg path
 
 python -m venv venv
-# Windows
+
 venv\Scripts\activate
-# macOS/Linux
+
 source venv/bin/activate
 
 2. Install dependencies:
